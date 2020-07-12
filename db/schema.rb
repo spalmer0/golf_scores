@@ -1,0 +1,155 @@
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
+#
+# This file is the source Rails uses to define your schema when running `rails
+# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# be faster and is potentially less error prone than running all of your
+# migrations from scratch. Old migrations may fail to apply correctly if those
+# migrations use external dependencies or application code.
+#
+# It's strongly recommended that you check this file into your version control system.
+
+ActiveRecord::Schema.define(version: 2020_07_07_130915) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "data_sources", force: :cascade do |t|
+    t.integer "source"
+    t.string "stat"
+    t.integer "year"
+    t.string "url"
+    t.string "table_location"
+    t.string "golfer_column_name"
+    t.string "source_column_names", default: [], array: true
+    t.string "destination_column_names", default: [], array: true
+    t.string "data_types", default: [], array: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "golfers", force: :cascade do |t|
+    t.string "name"
+    t.integer "salary"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "odds"
+    t.float "driving_accuracy_2020"
+    t.float "driving_accuracy_2019"
+    t.float "driving_distance_2020"
+    t.float "driving_distance_2019"
+    t.float "approach_100_fw_2020"
+    t.float "approach_100_fw_2019"
+    t.float "approach_50_75_fw_2020"
+    t.float "approach_50_75_fw_2019"
+    t.float "approach_75_100_fw_2020"
+    t.float "approach_75_100_fw_2019"
+    t.float "approach_100_125_fw_2020"
+    t.float "approach_100_125_fw_2019"
+    t.float "approach_125_150_fw_2020"
+    t.float "approach_125_150_fw_2019"
+    t.float "approach_150_175_fw_2020"
+    t.float "approach_150_175_fw_2019"
+    t.float "approach_175_200_fw_2020"
+    t.float "approach_175_200_fw_2019"
+    t.float "approach_200_225_fw_2020"
+    t.float "approach_200_225_fw_2019"
+    t.float "approach_225_250_fw_2020"
+    t.float "approach_225_250_fw_2019"
+    t.float "approach_250_275_fw_2020"
+    t.float "approach_250_275_fw_2019"
+    t.float "approach_275_fw_2020"
+    t.float "approach_275_fw_2019"
+    t.float "approach_100_rgh_2020"
+    t.float "approach_100_rgh_2019"
+    t.float "approach_75_100_rgh_2020"
+    t.float "approach_75_100_rgh_2019"
+    t.float "approach_100_125_rgh_2020"
+    t.float "approach_100_125_rgh_2019"
+    t.float "approach_125_150_rgh_2020"
+    t.float "approach_125_150_rgh_2019"
+    t.float "approach_150_175_rgh_2020"
+    t.float "approach_150_175_rgh_2019"
+    t.float "approach_175_200_rgh_2020"
+    t.float "approach_175_200_rgh_2019"
+    t.float "approach_200_225_rgh_2020"
+    t.float "approach_200_225_rgh_2019"
+    t.float "approach_225_250_rgh_2020"
+    t.float "approach_225_250_rgh_2019"
+    t.float "approach_250_275_rgh_2020"
+    t.float "approach_250_275_rgh_2019"
+    t.float "approach_275_rgh_2020"
+    t.float "approach_275_rgh_2019"
+    t.float "gir_100_2020"
+    t.float "gir_100_2019"
+    t.float "gir_75_100_2020"
+    t.float "gir_75_100_2019"
+    t.float "gir_100_125_2020"
+    t.float "gir_100_125_2019"
+    t.float "gir_125_150_2020"
+    t.float "gir_125_150_2019"
+    t.float "gir_150_175_2020"
+    t.float "gir_150_175_2019"
+    t.float "gir_175_200_2020"
+    t.float "gir_175_200_2019"
+    t.float "gir_200_2020"
+    t.float "gir_200_2019"
+    t.float "putting_3_2020"
+    t.float "putting_3_2019"
+    t.float "putting_4_2020"
+    t.float "putting_4_2019"
+    t.float "putting_5_2020"
+    t.float "putting_5_2019"
+    t.float "putting_6_2020"
+    t.float "putting_6_2019"
+    t.float "putting_7_2020"
+    t.float "putting_7_2019"
+    t.float "putting_8_2020"
+    t.float "putting_8_2019"
+    t.float "putting_9_2020"
+    t.float "putting_9_2019"
+    t.float "putting_10_2020"
+    t.float "putting_10_2019"
+    t.float "putting_10_15_2020"
+    t.float "putting_10_15_2019"
+    t.float "putting_15_20_2020"
+    t.float "putting_15_20_2019"
+    t.float "putting_20_25_2020"
+    t.float "putting_20_25_2019"
+    t.float "putting_25_2020"
+    t.float "putting_25_2019"
+    t.float "scrambling_2020"
+    t.float "scrambling_2019"
+    t.float "scrambling_10_2020"
+    t.float "scrambling_10_2019"
+    t.float "scrambling_10_20_2020"
+    t.float "scrambling_10_20_2019"
+    t.float "scrambling_20_30_2020"
+    t.float "scrambling_20_30_2019"
+    t.float "scrambling_30_2020"
+    t.float "scrambling_30_2019"
+    t.float "scrambling_rough_2020"
+    t.float "scrambling_rough_2019"
+    t.float "scrambling_sand_2020"
+    t.float "scrambling_sand_2019"
+    t.float "scrambling_other_2020"
+    t.float "scrambling_other_2019"
+    t.float "scrambling_fringe_2020"
+    t.float "scrambling_fringe_2019"
+    t.float "avoid_3_putt_5_2020"
+    t.float "avoid_3_putt_5_2019"
+    t.float "avoid_3_putt_5_10_2020"
+    t.float "avoid_3_putt_5_10_2019"
+    t.float "avoid_3_putt_10_15_2020"
+    t.float "avoid_3_putt_10_15_2019"
+    t.float "avoid_3_putt_15_20_2020"
+    t.float "avoid_3_putt_15_20_2019"
+    t.float "avoid_3_putt_20_25_2020"
+    t.float "avoid_3_putt_20_25_2019"
+    t.float "avoid_3_putt_25_2020"
+    t.float "avoid_3_putt_25_2019"
+    t.string "cuts"
+  end
+
+end
