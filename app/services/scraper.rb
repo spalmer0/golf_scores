@@ -27,6 +27,14 @@ class Scraper
     end
   end
 
+  def scrape_sources(sources)
+    sources.each do |source|
+      scrape_source(source)
+
+      sleep(5)
+    end
+  end
+
   def scrape_source(source)
     unparsed_page = HTTParty.get(source.url)
     parsed_data = Parser.parse_table(source, unparsed_page)
