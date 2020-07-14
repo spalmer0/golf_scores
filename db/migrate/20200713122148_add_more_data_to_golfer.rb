@@ -1,0 +1,47 @@
+class AddMoreDataToGolfer < ActiveRecord::Migration[6.0]
+  def change
+    add_column :golfers, :approach_2019, :float
+    add_column :golfers, :approach_2020, :float
+    add_column :golfers, :approach_rank_2019, :integer
+    add_column :golfers, :approach_rank_2020, :integer
+    add_column :golfers, :around_green_2019, :float
+    add_column :golfers, :around_green_2020, :float
+    add_column :golfers, :around_green_rank_2019, :integer
+    add_column :golfers, :around_green_rank_2020, :integer
+    add_column :golfers, :birdie_2019, :float
+    add_column :golfers, :birdie_2020, :float
+    add_column :golfers, :birdie_rank_2019, :integer
+    add_column :golfers, :birdie_rank_2020, :integer
+    add_column :golfers, :bogey_2019, :float
+    add_column :golfers, :bogey_2020, :float
+    add_column :golfers, :bogey_rank_2019, :integer
+    add_column :golfers, :bogey_rank_2020, :integer
+    add_column :golfers, :driving_accuracy_rank_2019, :integer
+    add_column :golfers, :driving_accuracy_rank_2020, :integer
+    add_column :golfers, :gir_2019, :float
+    add_column :golfers, :gir_2020, :float
+    add_column :golfers, :gir_rank_2019, :integer
+    add_column :golfers, :gir_rank_2020, :integer
+    add_column :golfers, :off_tee_2019, :float
+    add_column :golfers, :off_tee_2020, :float
+    add_column :golfers, :off_tee_rank_2019, :integer
+    add_column :golfers, :off_tee_rank_2020, :integer
+    add_column :golfers, :par_4_2019, :float
+    add_column :golfers, :par_4_2020, :float
+    add_column :golfers, :par_4_rank_2019, :integer
+    add_column :golfers, :par_4_rank_2020, :integer
+    add_column :golfers, :par_5_2019, :float
+    add_column :golfers, :par_5_2020, :float
+    add_column :golfers, :par_5_rank_2019, :integer
+    add_column :golfers, :par_5_rank_2020, :integer
+    add_column :golfers, :putting_2019, :float
+    add_column :golfers, :putting_2020, :float
+    add_column :golfers, :putting_rank_2019, :integer
+    add_column :golfers, :putting_rank_2020, :integer
+    add_column :golfers, :rounds, :integer
+    add_column :golfers, :tee_to_green_2019, :float
+    add_column :golfers, :tee_to_green_2020, :float
+    add_column :golfers, :tee_to_green_rank_2019, :integer
+    add_column :golfers, :tee_to_green_rank_2020, :integer
+  end
+end

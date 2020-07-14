@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_07_130915) do
+ActiveRecord::Schema.define(version: 2020_07_13_122148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -150,6 +150,49 @@ ActiveRecord::Schema.define(version: 2020_07_07_130915) do
     t.float "avoid_3_putt_25_2020"
     t.float "avoid_3_putt_25_2019"
     t.string "cuts"
+    t.float "approach_2019"
+    t.float "approach_2020"
+    t.integer "approach_rank_2019"
+    t.integer "approach_rank_2020"
+    t.float "around_green_2019"
+    t.float "around_green_2020"
+    t.integer "around_green_rank_2019"
+    t.integer "around_green_rank_2020"
+    t.float "birdie_2019"
+    t.float "birdie_2020"
+    t.integer "birdie_rank_2019"
+    t.integer "birdie_rank_2020"
+    t.float "bogey_2019"
+    t.float "bogey_2020"
+    t.integer "bogey_rank_2019"
+    t.integer "bogey_rank_2020"
+    t.integer "driving_accuracy_rank_2019"
+    t.integer "driving_accuracy_rank_2020"
+    t.float "gir_2019"
+    t.float "gir_2020"
+    t.integer "gir_rank_2019"
+    t.integer "gir_rank_2020"
+    t.float "off_tee_2019"
+    t.float "off_tee_2020"
+    t.integer "off_tee_rank_2019"
+    t.integer "off_tee_rank_2020"
+    t.float "par_4_2019"
+    t.float "par_4_2020"
+    t.integer "par_4_rank_2019"
+    t.integer "par_4_rank_2020"
+    t.float "par_5_2019"
+    t.float "par_5_2020"
+    t.integer "par_5_rank_2019"
+    t.integer "par_5_rank_2020"
+    t.float "putting_2019"
+    t.float "putting_2020"
+    t.integer "putting_rank_2019"
+    t.integer "putting_rank_2020"
+    t.integer "rounds"
+    t.float "tee_to_green_2019"
+    t.float "tee_to_green_2020"
+    t.integer "tee_to_green_rank_2019"
+    t.integer "tee_to_green_rank_2020"
   end
 
 end
