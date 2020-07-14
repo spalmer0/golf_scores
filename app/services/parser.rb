@@ -26,7 +26,12 @@ class Parser
 
   def headers
     @headers ||= table.css('th').map do |th|
-      th.text.split("\n").map(&:strip).join().downcase
+      th.text
+        .gsub("\u00A0", " ")
+        .split("\n")
+        .map(&:strip)
+        .join()
+        .downcase
     end
   end
 
