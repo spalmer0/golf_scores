@@ -1427,8 +1427,8 @@ data_sources = [
     url: 'https://www.pgatour.com/stats/stat.352.html',
     table_location: 'table#statsTable',
     golfer_column_name: 'player name',
-    data_types: ['percent', 'rank'],
-    source_column_names: ['%', 'rank this week'],
+    data_types: ['float', 'rank'],
+    source_column_names: ['average', 'rank this week'],
     destination_column_names: ['birdie_2020', 'birdie_rank_2020'],
   },
   {
@@ -1438,8 +1438,8 @@ data_sources = [
     url: 'https://www.pgatour.com/content/pgatour/stats/stat.352.y2019.html',
     table_location: 'table#statsTable',
     golfer_column_name: 'player name',
-    data_types: ['percent', 'rank'],
-    source_column_names: ['%', 'rank this week'],
+    data_types: ['float', 'rank'],
+    source_column_names: ['average', 'rank this week'],
     destination_column_names: ['birdie_2019', 'birdie_rank_2019'],
   },
   {

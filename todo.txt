@@ -1,3 +1,7 @@
 - bootstrap datatable plugin
 - dont overwrite data option
 - offload scraping to redis
+- allow opt-in for data download
+- run scraping weekly
+- add 'last-fetched' timestap to data sources model
+- 
