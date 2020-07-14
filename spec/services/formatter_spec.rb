@@ -43,5 +43,14 @@ RSpec.describe Formatter, type: :service do
 
       expect(Formatter.format(data, data_type)).to eq "this is a string"
     end
+
+    it 'formats ranks' do
+      tie_data = "T2"
+      no_tie_data = "1"
+      data_type = "rank"
+
+      expect(Formatter.format(tie_data, data_type)).to eq 2
+      expect(Formatter.format(no_tie_data, data_type)).to eq 1
+    end
   end
 end

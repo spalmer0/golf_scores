@@ -48,4 +48,8 @@ class Formatter
   def format_string
     data
   end
+
+  def format_rank
+    data.gsub(NON_DIGITS, "").to_i
+  end
 end

@@ -1,16 +1,18 @@
 class DataSource < ApplicationRecord
-  PERCENT = "percent"
   DISTANCE = "distance"
   FLOAT = "float"
-  MONEY = "money"
   INTEGER = "integer"
+  MONEY = "money"
+  PERCENT = "percent"
+  RANK = "rank"
   STRING = "string"
   VALID_DATA_TYPES = [
-    PERCENT,
     DISTANCE,
     FLOAT,
-    MONEY,
     INTEGER,
+    MONEY,
+    PERCENT,
+    RANK,
     STRING,
   ]
 
