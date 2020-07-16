@@ -1,7 +1,6 @@
 - bootstrap datatable plugin
 - dont overwrite data option
-- offload scraping to redis
 - allow opt-in for data download
-- run scraping weekly
 - add 'last-fetched' timestap to data sources model
-- 
+- overhaul data model; create DataPoint model? golfer has_many data_points?
+  - would allow user to arbitrarily collect data
