@@ -1,0 +1,2 @@
+ScraperWorker:
+  cron: "0 3 * * tue"
