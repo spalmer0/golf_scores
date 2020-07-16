@@ -20,11 +20,7 @@ class Scraper
   end
 
   def scrape_data
-    data_sources.each do |source|
-      scrape_source(source)
-
-      sleep(5)
-    end
+    scrape_sources(data_sources)
   end
 
   def scrape_sources(sources)
