@@ -14,6 +14,7 @@
       <th>Stat Column Name</th>
       <th>Destination Column Name</th>
       <th>Data Types</th>
+      <th>Last Fetched</th>
       <th></th>
       <th></th>
       <th></th>
@@ -32,6 +33,7 @@
         <td><%= data_source.source_column_names %></td>
         <td><%= data_source.destination_column_names %></td>
         <td><%= data_source.data_types %></td>
+        <td><%= data_source.last_fetched %></td>
         <td><%= link_to 'Show', data_source %></td>
         <td><%= link_to 'Edit', edit_data_source_path(data_source) %></td>
         <td><%= link_to 'Destroy', data_source, method: :delete, data: { confirm: 'Are you sure?' } %></td>

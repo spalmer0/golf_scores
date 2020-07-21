@@ -39,6 +39,8 @@ class Scraper
 
       golfer.update(golfer_data)
     end
+
+    source.update(last_fetched: DateTime.current)
   end
 
   private

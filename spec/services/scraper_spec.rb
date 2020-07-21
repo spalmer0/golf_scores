@@ -13,17 +13,23 @@ RSpec.describe Scraper, type: :service do
     end
 
     it 'creates a new golfer' do
-      expect { Scraper.scrape_data([2020]) }.to change { Golfer.count }.from(0).to(10)
+      expect { Scraper.scrape_all }.to change { Golfer.count }.from(0).to(10)
     end
 
     it 'creates a new golfer with the compiled data' do
-      Scraper.scrape_data([2020])
+      Scraper.scrape_all
 
       expect(Golfer.first).to have_attributes({
         name: 'Rory McIlroy',
         salary: 11200,
         putting_3_2020: 0.9906,
       })
+    end
+
+    it "updates the data sources with a 'last_fetched' timestamp" do
+      source = DataSource.last
+
+      expect { Scraper.scrape_all }.to change { source.reload.last_fetched }
     end
   end
 end
