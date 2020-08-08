@@ -17,6 +17,7 @@ class DataSourcesController < ApplicationController
     @data_source = DataSource.find(params[:id])
 
     if @data_source.update(data_source_params)
+      @data_source.update(last_fetched: nil)
       redirect_to data_sources_path, notice: 'Data source was successfully updated.'
     else
       render :edit
@@ -33,7 +34,6 @@ class DataSourcesController < ApplicationController
         :data_types,
         :destination_column_names,
         :golfer_column_name,
-        :last_fetched,
         :source_column_names,
         :source,
         :stat,

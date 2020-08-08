@@ -1,5 +1,9 @@
 - bootstrap datatable plugin
 - dont overwrite data option
+- clear 'last_fetched' timestamp if updating data source
 - allow opt-in for data download
+- prevent multiple fetches within any 30 (?) minute period
+- clear rotogrinders-derived data before fetching again
+  - more programmatic - clear data of any data source whose last_fetched is less than 1 week?
 - overhaul data model; create DataPoint model? golfer has_many data_points?
   - would allow user to arbitrarily collect data
